@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎵 Music Chat</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>🎵 Music Chat</h1>
+            <p>Чат для музыкантов и продюсеров</p>
+        </header>
+
+        <div id="loginForm" class="login-form">
+            <h2>Присоединиться к чату</h2>
+            <input type="text" id="usernameInput" placeholder="Твой никнейм" maxlength="20">
+            <select id="roomSelect">
+                <option value="general">🎧 Общий</option>
+                <option value="melodic-techno">🌊 Melodic Techno</option>
+                <option value="ambient">🌌 Ambient</option>
+                <option value="house">🏠 House</option>
+                <option value="drum-and-bass">⚡ Drum & Bass</option>
+            </select>
+            <button id="joinBtn">Войти в чат</button>
+        </div>
+
+        <div id="chatContainer" class="chat-container" style="display: none;">
+            <div class="chat-header">
+                <div class="room-info">
+                    <span id="currentRoom">🎧 Общий</span>
+                    <button id="changeRoomBtn" class="change-room-btn">Сменить комнату</button>
+                </div>
+                <div class="users-online">
+                    <span>Онлайн:</span>
+                    <div id="usersList"></div>
+                </div>
+            </div>
+
+            <div id="messages" class="messages"></div>
+
+            <div class="message-form">
+                <input type="text" id="messageInput" placeholder="Напиши сообщение..." maxlength="500">
+                <button id="sendBtn">Отправить</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
